@@ -52,4 +52,56 @@
     line-height: 2.438rem;
     max-width: 379px;
   }
+  /* 
+$sm: 576px;
+$xs: 768px;
+$md: 992px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1500px;
+*/
+@media (max-width:$xxl) {
+  background-size: 120% 105%; 
+}
+@media (max-width:$xl) {
+  background-size: 140% 105%; 
+  &__flex {
+    padding-left: 28rem;
+  }
+}
+@media (max-width:$lg) {
+  background-size: 130% 100%;
+}
+@media (max-width:$md) {
+  background-size: cover;
+  &__flex {
+    padding-left: 15rem;
+  }
+  &__sub-title {
+    font-size: 2.5rem;
+  }
+  &__title {
+    font-size: 7rem;
+    line-height: 8rem;
+  }
+  &__desc {
+    font-size: 2rem;
+  }
+}
+@media (max-width:$xs) {
+  &__flex {
+    padding-left: 10rem;
+  } 
+  &__title {
+    font-size: 5rem;
+    line-height: 6.5rem;
+  }
+}
+@media (max-width:$sm) {
+  &__flex {
+    padding-left: 5rem;
+  } 
+}
+
+
 }
