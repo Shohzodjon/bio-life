@@ -5,4 +5,43 @@
   left: 0;
   width: 100%;
   z-index: 90;
+  padding: 2rem 0;
+  border: 1px solid #fff;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    li {
+      a {
+        font-size: 1.7rem;
+        color: $white-900;
+        line-height: 2rem;
+      }
+    }
+  }
+
+
 }
