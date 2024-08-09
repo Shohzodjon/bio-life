@@ -1,3 +1,7 @@
+"use client";
+import { useState, useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
 import BlogCard from "../components/blog-card";
 import { RiLinkedinFill } from "react-icons/ri";
@@ -5,7 +9,33 @@ import { FaFacebookF } from "react-icons/fa6";
 import { TfiPinterest } from "react-icons/tfi";
 import { IoLogoInstagram } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
+gsap.registerPlugin(ScrollTrigger);
 const Blog = () => {
+
+  useEffect(() => {
+    gsap.utils.toArray(".blog-card").forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 200,
+        },
+        {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%", 
+            end: "bottom top", 
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 1,
+        }
+      );
+    });
+  }, []);
+
+
   const postData = [
     {
       desc: "Lörem ipsum patt kar i renyst robotfälla. Tregyktig  sana, nuktigt i mandatpingis tes. Analigt anede. Arat lagen",

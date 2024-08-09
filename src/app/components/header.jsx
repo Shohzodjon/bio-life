@@ -1,4 +1,16 @@
+"use client";
+import { useState, useEffect } from "react";
+import { gsap } from "gsap";
+
+
 const HeaderComp = () => {
+
+    useEffect(() => {
+        gsap.fromTo('.header',
+            { scale: 1.3, opacity: 0 },
+            { scale: 1, opacity: 1, duration: 2 ,delay:1})
+    }, [])
+
     return (
         <header className="header">
             <div className="container">

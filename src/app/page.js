@@ -1,4 +1,6 @@
 "use client";
+import { useState, useEffect } from "react";
+import { gsap } from "gsap";
 import HeaderComp from "./components/header";
 import Marquee from "react-fast-marquee";
 import Image from "next/image";
@@ -12,8 +14,33 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
+  useEffect(() => {
+    gsap.utils.toArray(".card").forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 200,
+        },
+        {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%", 
+            end: "bottom top", 
+            toggleActions: "play none none reverse",
+          },
+          opacity: 1,
+          y: 0,
+          duration: 1,
+        }
+      );
+    });
+  }, []);
+
   const partners = [
     { src: "/images/partner1.png", width: 70, height: 70, alt: "Partner 1" },
     { src: "/images/partner4.png", width: 70, height: 70, alt: "Partner 2" },

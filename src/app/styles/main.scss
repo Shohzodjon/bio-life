@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 html {
   font-size: 10px;
 }
@@ -23,6 +27,7 @@ li {
   width: 100%;
   margin-inline: auto;
 }
+
 /* 
 $sm: 576px;
 $xs: 768px;
@@ -32,12 +37,13 @@ $xl: 1200px;
 $xxl: 1500px;
 */
 @media (max-width:$xl) {
-  html{
+  html {
     font-size: 8px;
   }
 }
+
 @media (max-width:$md) {
-  html{
+  html {
     font-size: 7px;
   }
 }
