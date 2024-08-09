@@ -1,0 +1,55 @@
+.header {
+  height: 100vh;
+  background: url("/images/earth.png");
+  background-size: 100% 105%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background: linear-gradient(180deg, rgba(55, 110, 64, 0) 0%, #071917 100%);
+  }
+  .container {
+    position: relative;
+    height: 100%;
+  }
+  &__flex {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    padding-left: 283px;
+  }
+  &__sub-title {
+    font-size: 2.8rem;
+    color: $white-900;
+    line-height: 3.413rem;
+    font-weight: 600;
+  }
+  &__title {
+    color: $white-900;
+    font-weight: 600;
+    font-size: 8rem;
+    line-height: 9.752rem;
+    max-width: 626px;
+  }
+  &__desc {
+    color: $white-900;
+    font-size: 2rem;
+    line-height: 2.438rem;
+    max-width: 379px;
+  }
+}

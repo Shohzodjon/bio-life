@@ -1,19 +1,24 @@
-@import '__variables';
+@import "__variables", "components", "pages";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
+}
+.container {
+  max-width: 1394px;
+  width: 100%;
+  margin-inline: auto;
 }
