@@ -1,4 +1,4 @@
-@import "__variables", "components", "pages";
+@import "__variables", 'mixin', "components", "pages";
 
 * {
   margin: 0;
@@ -17,8 +17,34 @@ a {
 li {
   list-style: none;
 }
+
 .container {
   max-width: 1394px;
   width: 100%;
   margin-inline: auto;
+}
+/* 
+$sm: 576px;
+$xs: 768px;
+$md: 992px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1500px;
+*/
+@media (max-width:$xl) {
+  html{
+    font-size: 8px;
+  }
+}
+@media (max-width:$md) {
+  html{
+    font-size: 7px;
+  }
+}
+
+
+@media (max-width:1393px) {
+  .container {
+    padding: 0 15px;
+  }
 }

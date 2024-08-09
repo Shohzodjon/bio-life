@@ -6,7 +6,6 @@
   width: 100%;
   z-index: 90;
   padding: 2rem 0;
-  border: 1px solid #fff;
 
   &__flex {
     display: flex;
@@ -34,12 +33,72 @@
     display: flex;
     align-items: center;
     gap: 4rem;
+
     li {
       a {
         font-size: 1.7rem;
         color: $white-900;
         line-height: 2rem;
       }
+    }
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    label {
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      color: $white-900;
+      gap: 4px;
+      cursor: pointer;
+
+      input {
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background: none;
+        outline: none;
+        color: $white-900;
+        width: 0;
+        transition: $smooth;
+
+        &:focus {
+          border-color: $white-900;
+          width: 100px;
+          padding: 3px 6px;
+        }
+      }
+
+    }
+
+    span {
+      font-size: 1.8rem;
+      color: $white-900;
+      cursor: pointer;
+    }
+  }
+
+  /* 
+$sm: 576px;
+$xs: 768px;
+$md: 992px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1500px;
+*/
+  @media (max-width:$lg) {
+    &__avatar {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  @media (max-width:$xs) {
+    &__avatar {
+      width: 35px;
+      height: 35px;
     }
   }
 
