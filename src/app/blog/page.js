@@ -4,6 +4,7 @@ import { RiLinkedinFill } from "react-icons/ri";
 import { FaFacebookF } from "react-icons/fa6";
 import { TfiPinterest } from "react-icons/tfi";
 import { IoLogoInstagram } from "react-icons/io5";
+import { FiMenu } from "react-icons/fi";
 const Blog = () => {
   const postData = [
     {
@@ -97,6 +98,7 @@ const Blog = () => {
               <Link href="/">Technology</Link>
             </li>
           </ul>
+          <button className="blog-page__menu"><FiMenu/></button>
         </div>
 
         <main>

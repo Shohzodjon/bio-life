@@ -71,7 +71,6 @@
           padding: 3px 6px;
         }
       }
-
     }
 
     span {
@@ -80,25 +79,45 @@
       cursor: pointer;
     }
   }
-
-  /* 
-$sm: 576px;
-$xs: 768px;
-$md: 992px;
-$lg: 1024px;
-$xl: 1200px;
-$xxl: 1500px;
-*/
   @media (max-width:$lg) {
     &__avatar {
       width: 40px;
       height: 40px;
     }
   }
+  @media (max-width:$md) {
+    &__icons {
+      gap: 10px;
+  
+      label {
+        font-size: 1.8rem;
+  
+        input {
+  
+          &:focus {
+            width: 100px;
+            padding: 2px 6px;
+          }
+        }
+      }
+    }
+  }
   @media (max-width:$xs) {
     &__avatar {
       width: 35px;
       height: 35px;
+    }
+
+    &__icons {
+      gap: 8px;
+      label {
+        input {
+          &:focus {
+            width: 85px;
+            padding: 2px 6px;
+          }
+        }
+      }
     }
   }
 

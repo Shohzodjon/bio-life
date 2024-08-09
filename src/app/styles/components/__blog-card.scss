@@ -56,4 +56,41 @@
         }
     }
 
+
+    /* 
+$sm: 576px;
+$xs: 768px;
+$md: 992px;
+$lg: 1024px;
+$xl: 1200px;
+$xxl: 1500px;
+*/
+    @media (max-width:$md) {
+        border-radius: 20px;
+
+        &__img {
+            border-radius: 20px;
+        }
+
+        &__info {
+
+
+            button {
+                border-radius: 16px;
+            }
+        }
+    }
+
+    @media (max-width:$xs) {
+        &__info {
+            h2 {
+                font-size: 2.6rem;
+                line-height: 30px;
+            }
+            p {
+                font-size: 1.9rem;
+                line-height: 2.3rem;
+            }
+        }
+    }
 }
