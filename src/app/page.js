@@ -16,19 +16,19 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 export default function Home() {
   const partners = [
     { src: "/images/partner1.png", width: 70, height: 70, alt: "Partner 1" },
-    { src: "/images/partner2.png", width: 70, height: 70, alt: "Partner 2" },
+    { src: "/images/partner4.png", width: 70, height: 70, alt: "Partner 2" },
     { src: "/images/partner3.png", width: 70, height: 70, alt: "Partner 3" },
     { src: "/images/partner4.png", width: 70, height: 70, alt: "Partner 4" },
     { src: "/images/partner5.jpg", width: 70, height: 70, alt: "Partner 5" },
     { src: "/images/partner6.png", width: 70, height: 70, alt: "Partner 6" },
     { src: "/images/partner1.png", width: 70, height: 70, alt: "Partner 1" },
-    { src: "/images/partner2.png", width: 70, height: 70, alt: "Partner 2" },
+    { src: "/images/partner5.jpg", width: 70, height: 70, alt: "Partner 2" },
     { src: "/images/partner3.png", width: 70, height: 70, alt: "Partner 3" },
     { src: "/images/partner4.png", width: 70, height: 70, alt: "Partner 4" },
     { src: "/images/partner5.jpg", width: 70, height: 70, alt: "Partner 5" },
     { src: "/images/partner6.png", width: 70, height: 70, alt: "Partner 6" },
     { src: "/images/partner1.png", width: 70, height: 70, alt: "Partner 1" },
-    { src: "/images/partner2.png", width: 70, height: 70, alt: "Partner 2" },
+    { src: "/images/partner6.png", width: 70, height: 70, alt: "Partner 2" },
     { src: "/images/partner3.png", width: 70, height: 70, alt: "Partner 3" },
     { src: "/images/partner4.png", width: 70, height: 70, alt: "Partner 4" },
     { src: "/images/partner5.jpg", width: 70, height: 70, alt: "Partner 5" },
@@ -114,12 +114,30 @@ export default function Home() {
         <section className="home-page__blog">
           <h2>Lastest blog</h2>
           <Swiper
-            spaceBetween={50}
+            spaceBetween={20}
             slidesPerView={3}
             centeredSlides={true}
             loop
             autoplay
             modules={[Navigation, Pagination, Autoplay]}
+            breakpoints={{
+              300: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              600: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              991: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
           >
             {blogs.map((item) => (
               <SwiperSlide key={item.id}>
